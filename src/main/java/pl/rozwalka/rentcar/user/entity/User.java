@@ -1,6 +1,7 @@
-package pl.rozwalka.rentcar.entity;
+package pl.rozwalka.rentcar.user.entity;
 
 import lombok.Data;
+import pl.rozwalka.rentcar.car.entity.Car;
 
 import javax.persistence.*;
 import java.util.ArrayList;

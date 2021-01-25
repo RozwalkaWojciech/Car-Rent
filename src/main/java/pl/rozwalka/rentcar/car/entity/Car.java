@@ -1,4 +1,4 @@
-package pl.rozwalka.rentcar.entity;
+package pl.rozwalka.rentcar.car.entity;
 
 import lombok.Data;
 
