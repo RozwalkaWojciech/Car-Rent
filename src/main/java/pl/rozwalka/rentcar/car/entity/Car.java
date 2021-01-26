@@ -1,12 +1,15 @@
 package pl.rozwalka.rentcar.car.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "cars")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Car {
 
     @Id

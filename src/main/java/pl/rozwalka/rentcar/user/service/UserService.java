@@ -16,5 +16,4 @@ public class UserService {
     public List<Car> getUserCars(Long id) {
         return userRepository.findById(id).orElseThrow().getCars();
     }
-
 }

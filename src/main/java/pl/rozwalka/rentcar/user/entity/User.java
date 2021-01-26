@@ -1,6 +1,9 @@
 package pl.rozwalka.rentcar.user.entity;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import pl.rozwalka.rentcar.car.entity.Car;
 
 import javax.persistence.*;
@@ -9,7 +12,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
