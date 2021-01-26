@@ -38,10 +38,11 @@ class AppControllerTest {
 
     private User user;
     private Car car;
+    private List<Car> cars;
 
     @BeforeEach
     void init() {
-        List<Car> cars = new ArrayList<>();
+        cars = new ArrayList<>();
 
         car = Car.builder()
                 .brand("brand")
@@ -85,5 +86,32 @@ class AppControllerTest {
         assertThat(testUser.getCars().get(0).getBrand()).isEqualTo(car.getBrand());
         assertThat(testUser.getCars().get(0).getModel()).isEqualTo(car.getModel());
         assertThat(testUser.getCars().get(0).isAvailable()).isFalse();
+    }
+
+    @Test
+    @Transactional
+    void shouldGiveBackCarForUser() throws Exception {
+        //given
+        car.setAvailable(false);
+        carRepository.save(car);
+        cars.add(car);
+        user.setCars(cars);
+        userRepository.save(user);
+        //when
+        MvcResult mvcResult = mockMvc.perform(put("/app/" + user.getId() + "/give-back?carId=" + car.getId()))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andReturn();
+        //then
+        User testUser = objectMapper.readValue(mvcResult
+                .getResponse()
+                .getContentAsString(), User.class
+        );
+        assertThat(testUser).isNotNull();
+        assertThat(testUser.getFirstName()).isEqualTo(user.getFirstName());
+        assertThat(testUser.getLastName()).isEqualTo(user.getLastName());
+        assertThat(testUser.getCars().get(0).getBrand()).isEqualTo(car.getBrand());
+        assertThat(testUser.getCars().get(0).getModel()).isEqualTo(car.getModel());
+        assertThat(testUser.getCars().get(0).isAvailable()).isTrue();
     }
 }

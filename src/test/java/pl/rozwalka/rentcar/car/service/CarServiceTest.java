@@ -14,7 +14,7 @@ import static org.mockito.Mockito.when;
 class CarServiceTest {
 
     @Test
-    void shouldEqualsCorrectAvailableBooks() {
+    void shouldEqualsCorrectAvailableCars() {
         //given
         CarService carService = mock(CarService.class);
         //when
