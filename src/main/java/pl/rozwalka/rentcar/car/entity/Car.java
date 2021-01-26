@@ -14,8 +14,6 @@ public class Car {
     private Long id;
 
     private String brand;
-
     private String model;
-
     private boolean available;
 }
