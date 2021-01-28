@@ -11,10 +11,9 @@ This is a simple car rent system build with Spring Boot and dependencies/tools/t
 * Junit5
 * Integration test
 
----
----
+###Methods
 
-**Methods:**
+---
 
 1. Rent car for user
 1. Return car
@@ -24,3 +23,8 @@ This is a simple car rent system build with Spring Boot and dependencies/tools/t
 1. Get car by model
 
 ![Generate JavaDoc](md_res/car-rent.jpg)
+
+## Contact
+
+---
+[@Wojciech Rozwałka](https://www.linkedin.com/in/wojciech-rozwałka/) - feel free to contact me!
