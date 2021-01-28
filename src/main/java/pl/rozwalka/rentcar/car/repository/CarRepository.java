@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface CarRepository extends JpaRepository<Car, Long> {
 
-    Optional<Car> findCarByBrand(String brand);
+    Optional<Car> findCarByModel(String model);
 
     @Query("SELECT c FROM Car c WHERE c.brand LIKE %:like% OR c.model LIKE %:like%")
     List<Car> findByBrandOrModelLike(@Param("like") String like);

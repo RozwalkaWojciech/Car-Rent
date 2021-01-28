@@ -18,8 +18,8 @@ public class CarController {
     private final CarService carService;
 
     @GetMapping
-    public Car getByBrand(@RequestParam String brand) {
-        return carService.getByBrand(brand);
+    public Car getByModel(@RequestParam String model) {
+        return carService.getByBrand(model);
     }
 
     @GetMapping("available")

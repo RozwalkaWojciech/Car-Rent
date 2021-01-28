@@ -13,8 +13,8 @@ public class CarService {
 
     private final CarRepository carRepository;
 
-    public Car getByBrand(String brand) {
-        return carRepository.findCarByBrand(brand).orElseThrow();
+    public Car getByBrand(String model) {
+        return carRepository.findCarByModel(model).orElseThrow();
     }
 
     public List<Car> getAvailableCars() {
