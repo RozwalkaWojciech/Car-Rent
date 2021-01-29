@@ -27,4 +27,4 @@ This is a simple car rent system build with Spring Boot and dependencies/tools/t
 ## Contact
 
 ---
-[@Wojciech Rozwałka](https://www.linkedin.com/in/wojciech-rozwałka/) - feel free to contact me!
+[@Wojciech Rozwałka](https://www.linkedin.com/in/wojciech-rozwalka/) - feel free to contact me!
